@@ -1,0 +1,118 @@
+//line :1
+package math
+
+const (
+	
+	a0	= 1.1975323115670912564578e0
+	a1	= 4.7072688112383978012285e1
+	a2	= 6.9706266534389598238465e2
+	a3	= 4.8548868893843886794648e3
+	a4	= 1.6235862515167575384252e4
+	a5	= 2.3782041382114385731252e4
+	a6	= 1.1819493347062294404278e4
+	a7	= 8.8709406962545514830200e2
+	b0	= 1.0000000000000000000e0
+	b1	= 4.2313330701600911252e1
+	b2	= 6.8718700749205790830e2
+	b3	= 5.3941960214247511077e3
+	b4	= 2.1213794301586595867e4
+	b5	= 3.9307895800092710610e4
+	b6	= 2.8729085735721942674e4
+	b7	= 5.2264952788528545610e3
+	
+	c0	= 1.42343711074968357734e0
+	c1	= 4.63033784615654529590e0
+	c2	= 5.76949722146069140550e0
+	c3	= 3.64784832476320460504e0
+	c4	= 1.27045825245236838258e0
+	c5	= 2.41780725177450611770e-1
+	c6	= 2.27238449892691845833e-2
+	c7	= 7.74545014278341407640e-4
+	d0	= 1.4142135623730950488016887e0
+	d1	= 2.9036514445419946173133295e0
+	d2	= 2.3707661626024532365971225e0
+	d3	= 9.7547832001787427186894837e-1
+	d4	= 2.0945065210512749128288442e-1
+	d5	= 2.1494160384252876777097297e-2
+	d6	= 7.7441459065157709165577218e-4
+	d7	= 1.4859850019840355905497876e-9
+	
+	e0	= 6.65790464350110377720e0
+	e1	= 5.46378491116411436990e0
+	e2	= 1.78482653991729133580e0
+	e3	= 2.96560571828504891230e-1
+	e4	= 2.65321895265761230930e-2
+	e5	= 1.24266094738807843860e-3
+	e6	= 2.71155556874348757815e-5
+	e7	= 2.01033439929228813265e-7
+	f0	= 1.414213562373095048801689e0
+	f1	= 8.482908416595164588112026e-1
+	f2	= 1.936480946950659106176712e-1
+	f3	= 2.103693768272068968719679e-2
+	f4	= 1.112800997078859844711555e-3
+	f5	= 2.611088405080593625138020e-5
+	f6	= 2.010321207683943062279931e-7
+	f7	= 2.891024605872965461538222e-15
+)
+
+
+
+
+
+
+
+
+
+func OGtw9EW(_BqkSz0 float64) float64 {
+
+	if  /*line :1*/ OIdLpDqq(_BqkSz0) || _BqkSz0 <= -1 || _BqkSz0 >= 1 {
+		if _BqkSz0 == -1 || _BqkSz0 == 1 {
+			return  /*line :1*/ FSug4WHZSBwz( /*line :1*/ int(_BqkSz0))
+		}
+		return  /*line :1*/ WG0hZIT4()
+	}
+
+	awRlyItEG2gn := false
+	if _BqkSz0 < 0 {
+		_BqkSz0 = -_BqkSz0
+		awRlyItEG2gn = true
+	}
+
+	var lxDKWl float64
+	if _BqkSz0 <= 0.85 {
+		aBK_X3rbPc := 0.180625 - 0.25*_BqkSz0*_BqkSz0
+		b2xtU6qKJa := ((((((a7*aBK_X3rbPc+a6)*aBK_X3rbPc+a5)*aBK_X3rbPc+a4)*aBK_X3rbPc+a3)*aBK_X3rbPc+a2)*aBK_X3rbPc+a1)*aBK_X3rbPc + a0
+		otS2p8 := ((((((b7*aBK_X3rbPc+b6)*aBK_X3rbPc+b5)*aBK_X3rbPc+b4)*aBK_X3rbPc+b3)*aBK_X3rbPc+b2)*aBK_X3rbPc+b1)*aBK_X3rbPc + b0
+		lxDKWl = (_BqkSz0 * b2xtU6qKJa) / otS2p8
+	} else {
+		var b2xtU6qKJa, otS2p8 float64
+		aBK_X3rbPc :=  /*line :1*/ NeXs7bSyfaCD(Ln2 -  /*line :1*/ JrJVPb5WbG(1.0-_BqkSz0))
+		if aBK_X3rbPc <= 5.0 {
+			aBK_X3rbPc -= 1.6
+			b2xtU6qKJa = ((((((c7*aBK_X3rbPc+c6)*aBK_X3rbPc+c5)*aBK_X3rbPc+c4)*aBK_X3rbPc+c3)*aBK_X3rbPc+c2)*aBK_X3rbPc+c1)*aBK_X3rbPc + c0
+			otS2p8 = ((((((d7*aBK_X3rbPc+d6)*aBK_X3rbPc+d5)*aBK_X3rbPc+d4)*aBK_X3rbPc+d3)*aBK_X3rbPc+d2)*aBK_X3rbPc+d1)*aBK_X3rbPc + d0
+		} else {
+			aBK_X3rbPc -= 5.0
+			b2xtU6qKJa = ((((((e7*aBK_X3rbPc+e6)*aBK_X3rbPc+e5)*aBK_X3rbPc+e4)*aBK_X3rbPc+e3)*aBK_X3rbPc+e2)*aBK_X3rbPc+e1)*aBK_X3rbPc + e0
+			otS2p8 = ((((((f7*aBK_X3rbPc+f6)*aBK_X3rbPc+f5)*aBK_X3rbPc+f4)*aBK_X3rbPc+f3)*aBK_X3rbPc+f2)*aBK_X3rbPc+f1)*aBK_X3rbPc + f0
+		}
+		lxDKWl = b2xtU6qKJa / otS2p8
+	}
+
+	if awRlyItEG2gn {
+		return -lxDKWl
+	}
+	return lxDKWl
+}
+
+
+
+
+
+
+
+
+
+func RksdhBvu0Pq(_BqkSz0 float64) float64 {
+	return  /*line :1*/ OGtw9EW(1 - _BqkSz0)
+}
